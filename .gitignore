@@ -2,3 +2,5 @@ build
 source/.vs
 .vscode
 issues.txt
+.vs
+source/out

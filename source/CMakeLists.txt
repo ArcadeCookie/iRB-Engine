@@ -12,21 +12,13 @@ include(GenerateExportHeader)
 add_executable(${PROJECT_NAME} "main.cpp")
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
-###############
-set(GAMEOBJECT)
-file(GLOB GAMEOBJECT "libraries/GameObject/*.h" "libraries/GameObject/*.cpp")
-add_library(GameObject SHARED ${GAMEOBJECT})
-generate_export_header(GameObject)
-###############
-
-###############
-set(TIME)
-file(GLOB TIME "libraries/Time/*.h" "libraries/Time/*.cpp")
-add_library(Time SHARED ${TIME})
-generate_export_header(Time)
-###############
+set(ENGINE)
+file(GLOB ENGINE 
+    "iRB_Engine/GameObject/*.h" "iRB_Engine/GameObject/*.cpp"
+    "iRB_Engine/Time/*.h" "iRB_Engine/Time/*.cpp")
+add_library(Engine SHARED ${ENGINE})
+generate_export_header(Engine)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 
-target_link_libraries(${PROJECT_NAME} PUBLIC GameObject)
-target_link_libraries(${PROJECT_NAME} PUBLIC Time)
+target_link_libraries(${PROJECT_NAME} PUBLIC Engine)

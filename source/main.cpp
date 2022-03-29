@@ -1,8 +1,8 @@
-#include "libraries/GameObject/Vector2D.h"
-#include "libraries/GameObject/Vector2D_operators.h"
-#include "libraries/GameObject/BoundingBox.h"
-#include "libraries/GameObject/Actor.h"
-#include "libraries/Time/Clock.h"
+#include "iRB_Engine/GameObject/Vector2D.h"
+#include "iRB_Engine/GameObject/Vector2D_operators.h"
+#include "iRB_Engine/GameObject/BoundingBox.h"
+#include "iRB_Engine/GameObject/Actor.h"
+#include "iRB_Engine/Time/Clock.h"
 #include <iostream>
 
 int main()
