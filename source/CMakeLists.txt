@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.20)
 set(CMAKE_LEGACY_CYGWIN_WIN32 OFF)
 
 project(iRB_Engine C CXX)
@@ -19,6 +19,16 @@ file(GLOB ENGINE
 add_library(Engine SHARED ${ENGINE})
 generate_export_header(Engine)
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
+target_link_libraries(${PROJECT_NAME} PRIVATE Engine)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Engine)
+cmake_path(GET CMAKE_SOURCE_DIR PARENT_PATH LIBS_DIR)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    "${LIBS_DIR}/libs/glad/opengl3.3/build/Release/glad.lib"
+    "${LIBS_DIR}/libs/glfw/build/src/Release/glfw3.lib"
+)
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    "${LIBS_DIR}/libs/glad/opengl3.3/source/glad/include"
+    "${LIBS_DIR}/libs/glfw/source/glfw/include"
+)

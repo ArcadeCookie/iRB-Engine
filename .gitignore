@@ -4,3 +4,5 @@ source/.vs
 issues.txt
 .vs
 source/out
+glad/opengl3.3/build
+glfw/build
