@@ -15,7 +15,8 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 set(ENGINE)
 file(GLOB ENGINE 
     "iRB_Engine/GameObject/*.h" "iRB_Engine/GameObject/*.cpp"
-    "iRB_Engine/Time/*.h" "iRB_Engine/Time/*.cpp")
+    "iRB_Engine/Time/*.h" "iRB_Engine/Time/*.cpp"
+    "iRB_Engine/Graphic/*.h" "iRB_Engine/Graphic/*.cpp")
 add_library(Engine SHARED ${ENGINE})
 generate_export_header(Engine)
 
