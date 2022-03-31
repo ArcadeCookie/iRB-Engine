@@ -10,12 +10,15 @@ This project is developed using C++ and compiled using CMake, so here is a quick
 To build the external libraries that are used at the moment:
 
 - Make a folder called build right next to the source folder in `GameEngine\libs\glfw`
-- Using your preferred command prompt ("x64 Native Tools Command Prompt for VS" recommended) inside the build folder. Run `cmake ..\source`.
-- Do the same with in the folder `GameEngine\libs\glad\opengl3.3`
+- Using your preferred command prompt ("x64 Native Tools Command Prompt for VS" recommended) inside the build folder. Run `cmake ..\source\glfw`.
+- Open the solution file generated in the build folder and execute in the upper menu `Build > Build Solution` (make sure its in Release mode).
+- Make a folder called build right next to the source folder in `GameEngine\libs\glad\opengl3.3`
+- Using your command prompt inside the build folder. Run `cmake ..\source\glad`.
+- Open the solution file generated in the build folder and execute in the upper menu `Build > Build Solution` (make sure its in Release mode).
 
 Now to build this project:
 
 - Make a folder called build right next to the source folder.
 - Using your command prompt inside the build folder. Run `cmake ..\source`.
 - Open the solution file (iRB_Engine.sln) in the build folder, click on the upper menu `Build > Build Solution`.
-- Run iRB_Engine.exe in the new folder generated from the build process, with the same name of the build mode used (ex. Debug, Release)
+- Run iRB_Engine.exe in the new folder generated from the build process, with the same name of the build mode used (ex. Release)
