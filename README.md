@@ -1,5 +1,7 @@
 ## iRB Engine
-Game Engine project developed for CC5512 "Game Engine Architecture" (fcfm, U. de Chile) with the main objective of building a library that can support games with a mix of genres: BulletHell, Roguelike and Incremental
+Game Engine project developed for CC5512 "Game Engine Architecture" (fcfm, U. de Chile) with the main objective of building a library that can support games with a mix of genres: BulletHell, Roguelike and Incremental.
+
+A game project of the roguelike/bullet hell genre is developed on it, inspired by "Vampire Survivors" (https://store.steampowered.com/app/1794680/Vampire_Survivors/) and "Nova Drift" (https://store.steampowered.com/app/858210/Nova_Drift/)
  
 ### Installation
 This project is developed using C++ and compiled using CMake, so here is a quick way to make a viable environment:
